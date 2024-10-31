@@ -49,11 +49,257 @@
         .section-2 {
             overflow-y: auto;
         }
+
+        /* stars */
+        /* Fondo de estrellas fugaces */
+        #section1 {
+            position: relative;
+            overflow: hidden;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .stars, .shooting-star {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .stars::before, .stars::after, .shooting-star::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 2px;
+            height: 100px;
+            background: linear-gradient(410deg, orange, rgba(255, 255, 255, 0));
+            opacity: 0;
+            transform: translate(-50%, -50%) rotate(45deg);
+            animation: shooting-star 2s ease-in-out infinite;
+        }
+
+        .stars::before { animation-delay: 1s; }
+        .stars::after { animation-delay: 2s; }
+        .shooting-star::before { animation-delay: 3s; }
+
+        @keyframes shooting-star {
+            0% {
+                transform: translate(-50%, -50%) rotate(45deg) translateX(-500px);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(45deg) translateX(500px);
+                opacity: 0;
+            }
+        }
+
+        #section2 {
+            background-color: #2d033b; /* Fondo morado oscuro */
+            color: #fff; /* Texto blanco */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        #section2 h2 {
+            color: #ffde59; /* Título en amarillo */
+        }
+        
+        #section2 p {
+            color: #ffffff; /* Texto en blanco */
+        }
+        
+        #section2 .button {
+            background-color: #ffde59; /* Botón amarillo */
+            color: #2d033b; /* Texto del botón en morado oscuro */
+            margin-top: 20px;
+        }
+        
+        #section3 {
+            background-color: #ff69b4; /* Fondo rosa brillante */
+            color: #ffffff; /* Texto en blanco */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        #section3 h2 {
+            color: #ffde59; /* Título en amarillo */
+        }
+        
+        #section3 p {
+            color: #87ceeb; /* Texto en azul */
+        }
+        
+        #section3 .button {
+            background-color: #87ceeb; /* Botón azul */
+            color: #ff69b4; /* Texto del botón en rosa */
+            margin-top: 20px;
+        }
+        
+        #section4 {
+            background-color: #000000; /* Fondo negro */
+            color: #ffffff; /* Texto en blanco */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        #section4 h2 {
+            color: #ff0000; /* Título en rojo */
+        }
+        
+        #section4 p {
+            color: #ffffff; /* Texto en blanco */
+        }
+        
+        #section4 .button {
+            background-color: #ff0000; /* Botón rojo */
+            color: #ffffff; /* Texto del botón en blanco */
+            margin-top: 20px;
+        }
+        #section5 {
+            background-color: #ffb6c1; /* Fondo rosita */
+            color: #ffffff; /* Texto blanco */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .ticket {
+            width: 200px;
+            height: 100px;
+            background-color: #87ceeb; /* Azul cielo */
+            border: 2px dashed #ffffff; /* Borde blanco con líneas punteadas */
+            border-radius: 10px;
+            position: relative;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* Bordes recortados estilo ticket */
+        .ticket::before, .ticket::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ffb6c1; /* Fondo rosita */
+            border-radius: 50%;
+        }
+        
+        .ticket::before {
+            top: -10px;
+            left: 10px;
+        }
+        
+        .ticket::after {
+            bottom: -10px;
+            right: 10px;
+        }
+        /*decoracion*/
+        /* Decoraciones para section2 */
+        #section2::before, #section2::after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #ffbf00; /* Cempasúchil en amarillo */
+            opacity: 0.8;
+        }
+
+        #section2::before {
+            top: 10px;
+            left: 10px;
+        }
+
+        #section2::after {
+            bottom: 10px;
+            right: 10px;
+        }
+
+        /* Decoraciones para section3 */
+        .papel-picado {
+            position: absolute;
+            width: 100%;
+            height: 40px;
+            background: repeating-linear-gradient(
+                to right,
+                #ff69b4,
+                #ff69b4 20px,
+                transparent 20px,
+                transparent 40px
+            );
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .calavera {
+            position: absolute;
+            width: 40px;
+            height: 50px;
+            top: 10px;
+            right: 10px;
+            background-color: #87ceeb; /* Azul cielo */
+            border-radius: 50% 50% 45% 45%;
+            border: 3px solid #000; /* Borde negro */
+        }
+
+        /* Ojos de la calavera */
+        .calavera::before, .calavera::after {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background-color: #000; /* Ojos negros */
+            border-radius: 50%;
+            top: 15px;
+        }
+
+        .calavera::before {
+            left: 10px;
+        }
+
+        .calavera::after {
+            right: 10px;
+        }
+
+
     </style>
 </head>
 <body>
     <div id="section1" class="section">
+        <div class="stars">
+                <div class="shooting-star">
+            </div>
+            <div class="shooting-star">
+            </div>
+        </div>
         <div>
+            <!--ENDERESA LA ESPALDA-->
+            <!--ENDERESA LA ESPALDA-->
+            <!--ENDERESA LA ESPALDA-->
+            <!--ENDERESA LA ESPALDA-->
+            <!--ENDERESA LA ESPALDA-->
+            <!--ENDERESA LA ESPALDA-->
             <h1>Hola Lau uwu</h1>
             <button class="button" onclick="goToSection(2)">Solo quiero decirte</button>
         </div>
@@ -74,32 +320,44 @@
 
     <div id="section3" class="section hidden">
         <div>
-            
-            <p>Mis propias ideas acerca del amor que estaba dejando atrás aun estaba en parte ahí, nisiquiera he terminado el libro sobre la teoría poliamorosa y ya estaba corriendo contigo, me duele porque significa que las cosas pudieron ser mejores, al menos se que aprendimos de esto y que el futuro las cosas mejores para los dos.</p>    
+            <div class="papel-picado"></div> <!-- Papel picado decorativo -->
+            <div class="calavera"></div> <!-- Calavera decorativa -->
+
+            <p>Mis propias ideas acerca del amor que estaba dejando atrás aun estaba en parte ahí, nisiquiera he terminado el libro sobre la teoría poliamorosa y ya estaba corriendo contigo, me duele porque significa que las cosas pudieron ser mejores, al menos se que aprendimos de esto y que el futuro las cosas seran mejores para los dos, sin embargo</p>    
             <h2>Esas dos cosas se sentían ligeras</h2>
-            <p> con perder nuestra intimidad, sentí que me hablabas con honestidad sin preocuparte sobre lo que yo u otras personas podrian pensar, podia hablar de mi totalmente sin sentirme juzgado, despertar juntos era como seguir en el sueño, perder eso es lo que me das me da miedo.</p>
+            <p> comparado con perder nuestra intimidad, sentí que me hablabas con honestidad sin preocuparte sobre lo que yo u otras personas podrian pensar, podia hablar de mi totalmente sin sentirme juzgado, despertar juntos era como seguir en el sueño, perder eso es lo que me das me da miedo.</p>
             <button class="button" onclick="goToSection(4)">Tengo dos cosas que decir </button>
         </div>
     </div>
 
     <div id="section4" class="section hidden">
         <div>
-            <h2>😀</h2>
+            <h2>😀🤝</h2>
             <p>Desde el primer día que te conocí, tus ideas y hablar contigo me gusto, desde tu opinion sobre las relaciones, tu forma explorar la sexualidad, tus conocimientos en diseño, todo lo que que comentas y hablas me pareció entretenido.
 
-                Ese día le dije Arath que aunque no fuéramos a ser otra cosa, yo queria ser tu amigo, y el sentimiento sigue ahí, puedo apoyar con todo mi corazón a cualquier amigo, por Paloma, por arath, ellos pueden usar mi lavadora, usar mi credito, dormir en casa, comer mi comida y contarme su día a día, disfruto mucho su presencia, disfruto tambien la tuya, si alguna dia quieres ir a la via recreativa, ir a un café a charlar, o ver una película, esta bien, nada de contacto físico ni cursilerías, lo que mas gusta de ti es hablar contigo, no tienen que haber besos de pormedio, estoy mas que dispuesto a agendar un tiempo para ti.</p>
-            <button class="button" onclick="goToSection(5)">Siguiente</button>
+                Ese día le dije Arath que aunque no fuéramos a ser otra cosa, yo queria ser tu amigo, y el sentimiento sigue ahí, puedo apoyar con todo mi corazón a cualquier amigo, por Paloma, por arath, ellos pueden usar mi lavadora, usar mi credito, dormir en casa, comer mi comida y contarme su día a día, disfruto mucho su presencia, disfruto tambien la tuya, si alguna dia quieres ir a la via recreativa, ir a un café a charlar, o ver una película, esta bien, nada de contacto físico ni cursilerías, lo que mas gusta de ti es hablar contigo, no tiene que haber besos de por medio, estoy mas que dispuesto a agendar un tiempo para ti.</p>
+            <button class="button" onclick="goToSection(5)">Un ticket</button>
         </div>
     </div>
 
     <div id="section5" class="section hidden">
         <div>
             <h2>Aunque por mi parte </h2>
+            <div class="ticket"></div>
             <p>Yo no puedo (y no quiero) ver a alguien de quien estoy enamorado con los mismos ojos con los que veo a mis otros amigos, no te puedo ver solo de esa forma, me gustas mucho, te deseo y no necesito dejar eso atrás, tienes razón íbamos muy rápido y mis propias ideas sobre lo que es una relación no estaban del todo solidas, sin embargo lo que siento ya lo siento, no voy a esperar por ti porque tu ya tienes tu lugar asegurado, voy a seguir conociendo personas y aprendiendo de ellas, personas entraran y saldrán de mi vida, pero ya tienes tu boleto para una cita donde recibas trato de princesa, todos los dulces que quieras, todas las flores que quieras, todo el cariño que quieras en las dosis que quieras, todos los mensajes de buenos dias y de buenas noches, estoy mas que dispuesto a agendar un tiempo para ti.
 
                 no necesito que seamos novios para amarte, o que me presentes frente a tu abuela de esa forma, no necesito mas expectativas, me gustas por lo que eres, no por la etiqueta que tengamos, disfruto estar contigo, disfruto tu expresión cuando cumplo algún capricho, cobres o no ese boleto que tienes en mi corazón yo estaré feliz verte crecer, aprender y disfrutar nuevas cosas.
                 
                 No te guardo ningún enojo por si tenias dudas, tengo puro amor guardado para ti.</p>
+
+                <button class="button" onclick="goToSection(6)">Pd</button>
+        </div>
+    </div>
+    <div id="section6" class="section hidden">
+        <div>
+            <h2>Gracias por</h2>
+            <p id="word-display"></p>
+            <p>Puedes encontrar el codigo de esta pag <a href="https://github.com/Daniel-Martinez24/ll">aquí</a>, para que estudies :), solo es un archivo.</p>
         </div>
     </div>
 
@@ -114,6 +372,38 @@
             
             currentSection = nextSection;
         }
+
+        const words = [
+            "tu mente",
+            "enseñarme a manifestar",
+            "tu inteligencia",
+            "tu experiencia",
+            "tus comentarios",
+            "tus risas",
+            "tus palabras de motivación",
+            "tus mensajes",
+            "tus palabras",
+            "tus acciones",
+            "tu tiempo",
+            "tus gustos musicales",
+            "tus recomendaciones",
+            "tu conocimiento de Guadalajara",
+            "tu conocimiento de la vida",
+            "tus libros",
+            "tus miradas",
+            "tus sonrisas",
+            "tú"
+        ];
+        ; // Lista de palabras
+        let currentWordIndex = 0;
+
+        function changeWord() {
+            const wordDisplay = document.getElementById("word-display");
+            wordDisplay.textContent = words[currentWordIndex];
+            currentWordIndex = (currentWordIndex + 1) % words.length; // Cambia a la siguiente palabra
+        }
+
+        setInterval(changeWord, 2000); // Cambia cada 2 segundos
     </script>
 </body>
 </html>
