@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Web Móvil</title>
+    <style>
+        /* Estilos básicos para cada sección */
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: opacity 0.5s ease-in-out;
+            opacity: 1;
+        }
+
+        /* Ocultar secciones no activas */
+        .hidden {
+            opacity: 0;
+            pointer-events: none;
+            transform: translateX(-100%);
+        }
+
+        /* Botón de avance */
+        .button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        /* Sección con contenido deslizable */
+        .section-2 {
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="section1" class="section">
+        <div>
+            <h1>Hola Lau uwu</h1>
+            <button class="button" onclick="goToSection(2)">Solo quiero decirte</button>
+        </div>
+    </div>
+
+    <div id="section2" class="section hidden">
+        <div>
+            <h2>Al inicio...</h2>
+            <p>Desde el dia que me dijiste que no querias continuar pense mucho en tu mirada, recuerde nuestras citas, tu mirada en el motel, tu mirada cuando llegaba a tu casa, me veías y sonrías, podía sentir el amor saliéndose de tus ojos, me duele pensar en que hice para que dejaras de sentir eso, lamente haber hecho eso, te prometo que en todo momento solo quería que estuvieras mejor.</p>
+            <p>Aunque me de vergüenza admitirlo, también fue mi ego lo que le duele, porque creo que tienes razón, creo que tú interpretación de la situación fue la adecuada, íbamos demasiado rápido, los límites no estaban tan claros, de mi parte creo que el tiempo no estaba tan medido como creía que lo estaba, es verdad que me alcanzaba el tiempo para mi demas responsabilidades, pero mi tiempo si estaba descuidado.
+
+                Cómo podría definirte como un vínculo primario a unos días de haberte conocido?
+                
+                En el punto de mi vida en el que estoy después de todas cosas de las que estoy saliendo y todo en lo que me estoy convirtiendo, mi atención se debio ir en mi totalmente, al menos por un tiempo, un nuevo vinculo con una mirada hermosa como la tuya era un perfecto distractor.</p>
+            <button class="button" onclick="goToSection(3)">Aunque la verdad</button>
+        </div>
+    </div>
+
+    <div id="section3" class="section hidden">
+        <div>
+            
+            <p>Mis propias ideas acerca del amor que estaba dejando atrás aun estaba en parte ahí, nisiquiera he terminado el libro sobre la teoría poliamorosa y ya estaba corriendo contigo, me duele porque significa que las cosas pudieron ser mejores, al menos se que aprendimos de esto y que el futuro las cosas mejores para los dos.</p>    
+            <h2>Esas dos cosas se sentían ligeras</h2>
+            <p> con perder nuestra intimidad, sentí que me hablabas con honestidad sin preocuparte sobre lo que yo u otras personas podrian pensar, podia hablar de mi totalmente sin sentirme juzgado, despertar juntos era como seguir en el sueño, perder eso es lo que me das me da miedo.</p>
+            <button class="button" onclick="goToSection(4)">Tengo dos cosas que decir </button>
+        </div>
+    </div>
+
+    <div id="section4" class="section hidden">
+        <div>
+            <h2>😀</h2>
+            <p>Desde el primer día que te conocí, tus ideas y hablar contigo me gusto, desde tu opinion sobre las relaciones, tu forma explorar la sexualidad, tus conocimientos en diseño, todo lo que que comentas y hablas me pareció entretenido.
+
+                Ese día le dije Arath que aunque no fuéramos a ser otra cosa, yo queria ser tu amigo, y el sentimiento sigue ahí, puedo apoyar con todo mi corazón a cualquier amigo, por Paloma, por arath, ellos pueden usar mi lavadora, usar mi credito, dormir en casa, comer mi comida y contarme su día a día, disfruto mucho su presencia, disfruto tambien la tuya, si alguna dia quieres ir a la via recreativa, ir a un café a charlar, o ver una película, esta bien, nada de contacto físico ni cursilerías, lo que mas gusta de ti es hablar contigo, no tienen que haber besos de pormedio, estoy mas que dispuesto a agendar un tiempo para ti.</p>
+            <button class="button" onclick="goToSection(5)">Siguiente</button>
+        </div>
+    </div>
+
+    <div id="section5" class="section hidden">
+        <div>
+            <h2>Aunque por mi parte </h2>
+            <p>Yo no puedo (y no quiero) ver a alguien de quien estoy enamorado con los mismos ojos con los que veo a mis otros amigos, no te puedo ver solo de esa forma, me gustas mucho, te deseo y no necesito dejar eso atrás, tienes razón íbamos muy rápido y mis propias ideas sobre lo que es una relación no estaban del todo solidas, sin embargo lo que siento ya lo siento, no voy a esperar por ti porque tu ya tienes tu lugar asegurado, voy a seguir conociendo personas y aprendiendo de ellas, personas entraran y saldrán de mi vida, pero ya tienes tu boleto para una cita donde recibas trato de princesa, todos los dulces que quieras, todas las flores que quieras, todo el cariño que quieras en las dosis que quieras, todos los mensajes de buenos dias y de buenas noches, estoy mas que dispuesto a agendar un tiempo para ti.
+
+                no necesito que seamos novios para amarte, o que me presentes frente a tu abuela de esa forma, no necesito mas expectativas, me gustas por lo que eres, no por la etiqueta que tengamos, disfruto estar contigo, disfruto tu expresión cuando cumplo algún capricho, cobres o no ese boleto que tienes en mi corazón yo estaré feliz verte crecer, aprender y disfrutar nuevas cosas.
+                
+                No te guardo ningún enojo por si tenias dudas, tengo puro amor guardado para ti.</p>
+        </div>
+    </div>
+
+    <script>
+        let currentSection = 1;
+
+        function goToSection(nextSection) {
+            // Oculta la sección actual
+            document.getElementById(`section${currentSection}`).classList.add('hidden');
+            // Muestra la siguiente sección
+            document.getElementById(`section${nextSection}`).classList.remove('hidden');
+            
+            currentSection = nextSection;
+        }
+    </script>
+</body>
+</html>
